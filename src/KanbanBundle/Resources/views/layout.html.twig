@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+          {% block stylesheets %}
+	        {% stylesheets '@KanbanBundle/Resources/public/css/*' %}
+			    <link rel="stylesheet" href="{{ asset_url }}" />
+			{% endstylesheets %}
+		{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />        
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+        {% block javascripts %}
+	        {% javascripts '@KanbanBundle/Resources/public/js/*' %}
+			    <script src="{{ asset_url }}"></script>
+			{% endjavascripts %}
+		{% endblock %}
+
+    </body>
+</html>

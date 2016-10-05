@@ -1,0 +1,3 @@
+kanban_homepage:
+    path:     /
+    defaults: { _controller: KanbanBundle:Default:index }
